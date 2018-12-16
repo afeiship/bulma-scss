@@ -1,0 +1,26 @@
+{
+  "name": "bulma-scss",
+  "version": "0.7.2",
+  "description": "Bulma SCSS  The Bulma CSS Framework files converted to SCSS syntax",
+  "homepage": "https://github.com/afeiship/bulma-scss",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.7.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.1.2",
+    "sass-convert": "^0.5.2",
+    "sassdoc": "^2.5.1"
+  }
+}
