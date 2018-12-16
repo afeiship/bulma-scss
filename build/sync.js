@@ -1,35 +1,21 @@
-// clean:
-// exec('rm -rf .tmp')
-
-// make dir & clone to empty dir:
-// exec('mkdir .tmp');
-// exec('git clone --depth=1 https://github.com/jgthms/bulma.git .tmp');
-
-// vfs
-//   .src(['./.tmp/bumla.sass', './.tmp/sass/**.sass'])
-//   .pipe(
-//     converter({
-//       from: 'sass',
-//       to: 'scss'
-//     })
-//   )
-//   .pipe(vfs.dest('./dist'));
-
 (function() {
   'use strict';
 
   var gulp = require('gulp');
+  var config = require('./config');
+  var argv = require('yargs').argv;
   var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
   });
 
-  var converter = require('sass-convert');
-  var sassdoc = require('sassdoc');
+  var shell = require('shelljs');
+  var exec = shell.exec;
 
+  //clean
   gulp.task('sync', function() {
-    gulp
-      .src('./.tmp/bulma.sass')
-      .pipe(converter({ from: 'sass', to: 'scss' }))
-      .pipe(gulp.dest('dist'));
+    // clean:
+    exec('rm -rf .tmp && mkdir .tmp');
+    // clone:
+    exec('git clone --depth=1 https://github.com/jgthms/bulma.git .tmp --verbose');
   });
 })();

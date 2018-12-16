@@ -10,6 +10,8 @@
     require('./build/' + file);
   });
 
-  gulp.task('default',['build']);
+  gulp.task('default',['clean'],()=>{
+    gulp.start('sass2scss');
+  });
 
 }());
