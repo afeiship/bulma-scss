@@ -1,6 +1,17 @@
 # bulma-scss
 > Bulma SCSS  The Bulma CSS Framework files converted to SCSS syntax
 
+## install:
+```shell
+npm install -S afeiship/bulma-scss
+```
+
+## usage:
+```scss
+@import '~bulma-scss';
+```
+
+
 ## sync && rebuild:
 ```shell
 cd .tmp
