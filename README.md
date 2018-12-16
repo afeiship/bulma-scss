@@ -11,13 +11,12 @@ npm install -S afeiship/bulma-scss
 @import '~bulma-scss';
 ```
 
-
 ## sync && rebuild:
 ```shell
 cd .tmp
 git clone --depth=1 https://github.com/jgthms/bulma.git
 cd ..
-gulp sass2scss
+gulp clean && gulp sass2scss
 ```
 
 ## before build:
