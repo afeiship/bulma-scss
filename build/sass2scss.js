@@ -7,12 +7,17 @@
     pattern: ['gulp-*', 'gulp.*', 'del']
   });
 
-  gulp.task('sass2scss', function() {
+  gulp.task('copy-sass', function() {
+    gulp.src('.tmp/bulma/sass/**/*.sass').pipe(gulp.dest('.tmp/dist/scss'));
+    gulp.src('.tmp/bulma/bulma.sass').pipe(gulp.dest('.tmp/dist'));
+  });
+
+  gulp.task('sass2scss', ['copy-sass'], function() {
     return gulp
-      .src(['./.tmp/bulma/bulma.sass', './.tmp/bulma/sass/**/*.sass'])
+      .src('.tmp/dist/**/*.sass')
+      .pipe($.replace('sass', 'scss'))
       .pipe(converter({ from: 'sass', to: 'scss' }))
       .pipe($.rename({ extname: '.scss' }))
-      .pipe($.replace('.sass','.scss'))
       .pipe(gulp.dest('dist'));
   });
 })();

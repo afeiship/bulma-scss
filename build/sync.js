@@ -14,8 +14,8 @@
   //clean
   gulp.task('sync', function() {
     // clean:
-    exec('rm -rf .tmp && mkdir .tmp');
+    exec('rm -rf .tmp && mkdir -p .tmp/bulma');
     // clone:
-    exec('git clone --depth=1 https://github.com/jgthms/bulma.git .tmp --verbose');
+    exec('git clone --depth=1 https://github.com/jgthms/bulma.git .tmp/bulma --verbose');
   });
 })();
