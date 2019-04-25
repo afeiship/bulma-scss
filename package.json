@@ -9,7 +9,8 @@
   },
   "scripts": {
     "sync": "gulp sync",
-    "build": "gulp"
+    "build": "gulp",
+    "postbuild": "gulp version"
   },
   "main": "dist/bulma.scss",
   "license": "MIT",
