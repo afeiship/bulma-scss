@@ -12,6 +12,7 @@
       .src(['./.tmp/bulma/bulma.sass', './.tmp/bulma/sass/**/*.sass'])
       .pipe(converter({ from: 'sass', to: 'scss' }))
       .pipe($.rename({ extname: '.scss' }))
+      .pipe($.replace('.sass','.scss'))
       .pipe(gulp.dest('dist'));
   });
 })();
