@@ -16,7 +16,8 @@ npm install -S afeiship/bulma-scss
 cd .tmp
 git clone --depth=1 https://github.com/jgthms/bulma.git
 cd ..
-gulp clean && gulp sass2scss
+npm run sync
+npm run build
 ```
 
 ## before build:
